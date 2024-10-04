@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RMIT Business Analytics Champion</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <link rel="icon" href="./src/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/antd@4.16.13/dist/antd.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/antd@4.16.13/dist/antd.min.js"></script>
+
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+
+  <body class="bg-gray-900">
+    <!-- Header -->
+    <header
+      style="background: #161928; padding: 0 72px"
+      class="h-20 w-full fixed top-0 z-10">
+      <nav class="flex justify-between items-center h-full">
+        <div class="cursor-pointer">
+          <img src="./src/image/logo.svg" alt="" id="logo" />
+        </div>
+        <div class="w-full">
+          <ul class="flex font-bold text-lg justify-around">
+            <li>
+              <a href="#about" class="menu-link text-gray hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#rbac-season"
+                id="rbac-link"
+                class="menu-link text-gray hover:text-white"
+                >RBAC Season 5</a
+              >
+            </li>
+            <li>
+              <a
+                href="#prize"
+                id="prize-link"
+                class="menu-link text-gray hover:text-white"
+                >Prize</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sponsors"
+                id="sponsors-link"
+                class="menu-link text-gray hover:text-white"
+                >Sponsors</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                id="contact-link"
+                class="menu-link text-gray hover:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center w-2/12">
+          <div class="flex space-x-2 mr-6">
+            <img src="./src/image/icon/fb_icon.svg" alt="" class="w-6" />
+            <img src="./src/image/icon/in_icon.svg" alt="" class="w-6" />
+          </div>
+          <a
+            href="https://forms.office.com/pages/responsepage.aspx?id=cTYy0b7NF0S01L2yS1Exa0nfRzNnGjZDg7y5SGUTCMtUOEY4S1E0OTBHOUJMTDlUN0QxUVJEOTFHRy4u&fbclid=IwZXh0bgNhZW0CMTEAAR0i0jEPX3Cb2hA-VJabrSny7P9GAsV76zV5vX4L-ZtlrUp2kSe2iWxU6iU_aem_nwpQiTIZ_CC1kIqCn1Xigw&route=shorturl"
+            class="button-register-header"
+            >Register</a
+          >
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="about"
+      class="bg-cover bg-center py-32"
+      style="background-image: url('./src/image/bg_1.jpg'); padding-left: 72px">
+      <div class="text-left w-1/2 mr-6">
+        <h1 class="font-normal uppercase mb-0 title-white">
+          RMIT Business Analytics Champion
+        </h1>
+        <h2 class="uppercase mb-0 title" style="font-size: 40px">Season 5</h2>
+        <p class="mt-8 text-lg">
+          RBAC (RMIT Business Analytics Champion) is a realistic business
+          case-solving competition, awaiting those who want to show everyone
+          just how good they are with data!
+        </p>
+        <!-- countdown -->
+        <div class="countdown-container">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">90</span>
+            <span class="countdown-label">DAYS</span>
+          </div>
+          <div
+            class="space-x-4"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              font-size: 40px;
+              line-height: 48px;
+            ">
+            <div class="countdown-item">
+              <div class="countdown-number" id="hours">16</div>
+              <div class="countdown-label">HOURS</div>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="minutes">43</div>
+              <div class="countdown-label">MINUTES</div>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="seconds">21</div>
+              <div class="countdown-label">SECONDS</div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://forms.office.com/pages/responsepage.aspx?id=cTYy0b7NF0S01L2yS1Exa0nfRzNnGjZDg7y5SGUTCMtUOEY4S1E0OTBHOUJMTDlUN0QxUVJEOTFHRy4u&fbclid=IwZXh0bgNhZW0CMTEAAR0i0jEPX3Cb2hA-VJabrSny7P9GAsV76zV5vX4L-ZtlrUp2kSe2iWxU6iU_aem_nwpQiTIZ_CC1kIqCn1Xigw&route=shorturl">
+          <div
+            class="image-container cursor-pointer"
+            style="width: fit-content">
+            <img
+              src="./src/image/register_default.png"
+              alt="Register Button"
+              id="register-btn" />
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-16 text-center bg-cover"
+      style="background-image: url('./src/image/BG_Section2.jpg')">
+      <div class="flex" style="padding: 128px 72px">
+        <div class="w-2/3 px-12">
+          <!-- image slider -->
+          <div class="slick-slider">
+            <div><img src="./src/image/slide/slide_1.JPG" alt="" /></div>
+            <div><img src="./src/image/slide/slide_2.JPG" alt="" /></div>
+            <div><img src="./src/image/slide/slide_3.JPG" alt="" /></div>
+            <div><img src="./src/image/slide/slide_4.JPG" alt="" /></div>
+          </div>
+        </div>
+        <div class="w-1/3 text-left" style="margin-left: 72px">
+          <button class="button-arrow">
+            <span>ABOUT US</span>
+            <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+          </button>
+          <div class="mt-6 mb-8">
+            <span class="title"> WHO </span>
+            <span class="title-white"> ARE WE? </span>
+          </div>
+          <p class="text-gray-300 mb-6 mx-auto">
+            RMIT Business Analytics Champion (RBAC) is a distinguished national
+            student competition that was first established in 2020. This
+            competition provides a dynamic and enriching platform for passionate
+            undergraduate students to deepen their knowledge and gain practical
+            experience in the field of Business Analytics. Additionally, RBAC
+            facilitates valuable connections between prestigious sponsors and
+            their prospective customers, interns, and various other
+            stakeholders.
+          </p>
+        </div>
+      </div>
+
+      <!-- Achievements Section -->
+      <div class="pb-16 text-center">
+        <div class="mx-auto">
+          <div class="flex justify-center mb-4">
+            <button class="button-arrow">
+              <span>ABOUT US</span>
+              <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+            </button>
+          </div>
+          <h2 class="font-bold text-white mb-12 mt-6 title uppercase">
+            Our Achievements
+          </h2>
+          <div class="flex justify-center space-x-12" style="padding: 0 184px">
+            <div class="custom-achievement w-1/3 flex flex-col items-center">
+              <img src="./src/image/icon/Candidate.svg" alt="" class="w-24" />
+              <h3 class="title-white">3250+</h3>
+              <p class="mt-2 countdown-label font-normal uppercase">
+                Candidates
+              </p>
+            </div>
+            <div class="custom-achievement w-1/3 flex flex-col items-center">
+              <img src="./src/image/icon/University.svg" alt="" class="w-24" />
+              <h3 class="title-white">60+</h3>
+              <p class="mt-2 countdown-label font-normal uppercase">
+                Universities
+              </p>
+            </div>
+            <div class="custom-achievement w-1/3 flex flex-col items-center">
+              <img src="./src/image/icon/Partners.svg" alt="" class="w-24" />
+              <h3 class="title-white">100+</h3>
+              <p class="mt-2 countdown-label font-normal uppercase">Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Section -->
+      <section class="py-16" id="rbac-season">
+        <div class="mx-auto text-center">
+          <div class="flex flex-col items-center">
+            <button class="button-arrow uppercase">
+              <span>rbac season 5</span>
+              <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+            </button>
+            <div class="mb-12 mt-6 title uppercase">Timeline</div>
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="flex">
+              <div class="timeline-date">
+                <span class="text-gradient">01</span>
+                <span class="countdown-label">NOV</span>
+                <div id="border-expand" class="border-expand"></div>
+              </div>
+              <div class="timeline-item">
+                <h3>
+                  Open Ceremony
+                  <span class="arrow">
+                    <img src="./src/image/icon/arrow_up_down.svg" alt="" />
+                  </span>
+                </h3>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque imperdiet tortor vitae odio sollicitudin
+                    laoreet. Ut non nisl a metus malesuada sagittis sed quis
+                    quam. Vivamus eu nibh ligula. Duis eu elit metus. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="flex">
+              <div class="timeline-date">
+                <span class="text-gradient">03</span>
+                <span class="countdown-label">NOV</span>
+                <div id="border-expand" class="border-expand"></div>
+              </div>
+              <div class="timeline-item">
+                <h3>
+                  <div class="flex flex-col items-start">
+                    <div class="flex flex-col">
+                      <button class="button-arrow">
+                        <span>ROUND 1</span>
+                        <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+                      </button>
+                      <span class="mt-2 mb-6 text-3xl">
+                        Preliminary Round (Online Test)
+                      </span>
+                    </div>
+                    <div class="info-line">
+                      <p class="m-0">Time: 9:00 - 10:30, 3 November 2024</p>
+                      <p class="m-0">Platform: specialized website</p>
+                    </div>
+                  </div>
+                  <span class="arrow">
+                    <img src="./src/image/icon/arrow_up_down.svg" alt="" />
+                  </span>
+                </h3>
+                <div class="content">
+                  <p class="mt-6">
+                    Top 30 teams will receive a Case Study package <br />
+                    Each team will make a 15-slide storyboard to analyze,
+                    visualize and give business insights then submit the slide
+                    along with the analysis. <br />
+                    <span class="text-orange">
+                      The top 5 teams will be selected to the final round
+                    </span>
+                  </p>
+                  <div class="support-event">
+                    <p>
+                      <strong
+                        >Support Event | Training Workshop (Online)</strong
+                      >
+                    </p>
+                    <ul class="list-disc">
+                      <li>Time: 9:00 - 11:00, 8 November 2024</li>
+                      <li>Platform: Online/Zoom</li>
+                    </ul>
+                    <p>
+                      Provide information about our strategic sponsor’s industry
+                      so that participants can have better insights to improve
+                      their analysis and recommendations. Opportunity to learn
+                      more about Business Analytics technical skills and
+                      toolsets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="flex">
+              <div class="timeline-date">
+                <span class="text-gradient">07</span>
+                <span class="countdown-label">NOV</span>
+                <img
+                  src="./src/image/icon/Arrow_Left.svg"
+                  alt=""
+                  style="transform: rotate(90deg)"
+                  class="w-6" />
+                <span class="text-gradient">12</span>
+                <span class="countdown-label">NOV</span>
+                <div id="border-expand" class="border-expand"></div>
+              </div>
+              <div class="timeline-item">
+                <h3>
+                  <div class="flex flex-col items-start">
+                    <div class="flex flex-col">
+                      <button class="button-arrow">
+                        <span>ROUND 2</span>
+                        <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+                      </button>
+                      <span class="mt-2 mb-6 text-3xl">
+                        From Data to Insight (Online)
+                      </span>
+                    </div>
+                    <div class="info-line">
+                      <p class="m-0">
+                        Time: 12:00, 7 November 2024 - 23:59, 12 November 2024
+                      </p>
+                    </div>
+                  </div>
+                  <span class="arrow">
+                    <img src="./src/image/icon/arrow_up_down.svg" alt="" />
+                  </span>
+                </h3>
+                <div class="content">
+                  <p class="mt-6">
+                    Top 30 teams will receive a Case Study package <br />
+                    Each team will make a 15-slide storyboard to analyze,
+                    visualize and give business insights then submit the slide
+                    along with the analysis. <br />
+                    <span class="text-orange">
+                      The top 5 teams will be selected to the final round
+                    </span>
+                  </p>
+                  <div class="support-event">
+                    <p>
+                      <strong
+                        >Support Event | Training Workshop (Online)</strong
+                      >
+                    </p>
+                    <ul class="list-disc">
+                      <li>Time: 9:00 - 11:00, 8 November 2024</li>
+                      <li>Platform: Online/Zoom</li>
+                    </ul>
+                    <p>
+                      Provide information about our strategic sponsor’s industry
+                      so that participants can have better insights to improve
+                      their analysis and recommendations. Opportunity to learn
+                      more about Business Analytics technical skills and
+                      toolsets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="flex">
+              <div class="timeline-date">
+                <span class="text-gradient">21</span>
+                <span class="countdown-label">NOV</span>
+                <img
+                  src="./src/image/icon/Arrow_Left.svg"
+                  alt=""
+                  style="transform: rotate(90deg)" />
+                <span class="text-gradient">27</span>
+                <span class="countdown-label">NOV</span>
+                <div id="border-expand" class="border-expand"></div>
+              </div>
+              <div class="timeline-item">
+                <h3>
+                  <div class="flex flex-col items-start">
+                    <div class="flex flex-col">
+                      <button class="button-arrow">
+                        <span>ROUND 3</span>
+                        <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+                      </button>
+                      <span class="mt-2 mb-6 text-3xl"> Final Round </span>
+                    </div>
+                    <div class="info-line">
+                      <p class="m-0">
+                        Time: 12:00, 21 November 2024 - 23:59, 27 November 2024
+                      </p>
+                    </div>
+                  </div>
+                  <span class="arrow">
+                    <img src="./src/image/icon/arrow_up_down.svg" alt="" />
+                  </span>
+                </h3>
+                <div class="content">
+                  <p class="mt-6">
+                    Top 30 teams will receive a Case Study package <br />
+                    Each team will make a 15-slide storyboard to analyze,
+                    visualize and give business insights then submit the slide
+                    along with the analysis. <br />
+                    <span class="text-orange">
+                      The top 5 teams will be selected to the final round
+                    </span>
+                  </p>
+                  <div class="support-event">
+                    <p>
+                      <strong
+                        >Support Event | Training Workshop (Online)</strong
+                      >
+                    </p>
+                    <ul class="list-disc">
+                      <li>Time: 9:00 - 11:00, 8 November 2024</li>
+                      <li>Platform: Online/Zoom</li>
+                    </ul>
+                    <p>
+                      Provide information about our strategic sponsor’s industry
+                      so that participants can have better insights to improve
+                      their analysis and recommendations. Opportunity to learn
+                      more about Business Analytics technical skills and
+                      toolsets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="flex">
+              <div class="timeline-date">
+                <span class="text-gradient">29</span>
+                <span class="countdown-label">NOV</span>
+              </div>
+              <div class="timeline-item">
+                <h3>
+                  <div class="flex flex-col items-start">
+                    <div class="flex flex-col">
+                      <button class="button-arrow capitalize">
+                        <span>grand finale</span>
+                        <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+                      </button>
+                      <span class="mt-2 mb-6 text-3xl"> Closing Ceremony </span>
+                    </div>
+                    <div class="info-line">
+                      <p class="m-0">Time: 13:00 - 17:00, 29 November 2024</p>
+                      <p class="m-0">
+                        Venue: Auditorium at RMIT University Vietnam
+                      </p>
+                    </div>
+                  </div>
+                  <span class="arrow">
+                    <img src="./src/image/icon/arrow_up_down.svg" alt="" />
+                  </span>
+                </h3>
+                <div class="content">
+                  <p class="mt-6">
+                    Top 30 teams will receive a Case Study package <br />
+                    Each team will make a 15-slide storyboard to analyze,
+                    visualize and give business insights then submit the slide
+                    along with the analysis. <br />
+                    <span class="text-orange">
+                      The top 5 teams will be selected to the final round
+                    </span>
+                  </p>
+                  <div class="support-event">
+                    <p>
+                      <strong
+                        >Support Event | Training Workshop (Online)</strong
+                      >
+                    </p>
+                    <ul class="list-disc">
+                      <li>Time: 9:00 - 11:00, 8 November 2024</li>
+                      <li>Platform: Online/Zoom</li>
+                    </ul>
+                    <p>
+                      Provide information about our strategic sponsor’s industry
+                      so that participants can have better insights to improve
+                      their analysis and recommendations. Opportunity to learn
+                      more about Business Analytics technical skills and
+                      toolsets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- RBAC Section -->
+    <section
+      id="rbac-season"
+      class="pb-48 pt-32 px-48 text-center bg-cover bg-center bg-no-repeat"
+      style="background-image: url('./src/image/BG_Section3.jpg')">
+      <div class="flex">
+        <div class="w-1/2">
+          <div class="flex flex-col text-left">
+            <button class="button-arrow uppercase mb-6">
+              <span>rbac season 5</span>
+              <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+            </button>
+            <div class="title-white uppercase">rules and</div>
+            <div class="title uppercase">regulation</div>
+          </div>
+        </div>
+        <div class="w-1/2 text-left">
+          <div
+            style="
+              border-top: 4px solid rgba(255, 255, 255, 0.2);
+              border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+              padding: 24px 0;
+            ">
+            <div class="text-orange text-lg mb-2">Eligibility</div>
+            <ul class="text-base list-disc">
+              <li>All nationalities are accepted</li>
+              <li>
+                Participants must be undergraduate students and currently
+                studying in universities in Vietnam (Students enrolling in
+                universities outside Vietnam are not eligible)
+              </li>
+              <li>
+                The former Top 5 finalists of RBAC previous seasons,
+                Ambassadors, and Organizers are not allowed to participate in
+                the competition
+              </li>
+            </ul>
+          </div>
+          <div
+            style="
+              border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+              padding: 24px 0;
+            ">
+            <div class="text-orange text-lg mb-2">Registration</div>
+            <ul class="text-base list-disc">
+              <li>
+                A team must consist of 4 members (each contestant can only join
+                one team, and students from different universities could form a
+                team).
+              </li>
+              <li>Each contestant can join only one team.</li>
+              <li>
+                If any team wants to change its member(s), the team leader must
+                inform the organizers before the registration form closes. If
+                the request is sent after the form deadline, that team must
+                continue with at least 3 members.
+              </li>
+              <li>
+                Participants can use National ID/Passport, Student Card or
+                Statement of Enrolment for identification.
+              </li>
+            </ul>
+          </div>
+          <div style="padding: 24px 0">
+            <div class="text-orange text-lg mb-2">Notes</div>
+            <ul class="text-base list-disc">
+              <li>
+                Teams must strictly comply with the regulations and deadlines
+                set by the Organizers for submissions of each round.
+              </li>
+              <li>
+                All sessions (including rounds, workshops, and pitching round)
+                are held in English. All team submissions must be in English
+              </li>
+              <li>
+                RBAC organizers reserve the right to disqualify any team if that
+                team shows signs of violation or does not comply with the above
+                rules (Organizers will contact the team at least 12 hours before
+                making the final decision on a disqualification).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- prize -->
+      <section class="flex justify-center mt-32" id="prize">
+        <div class="w-1/2">
+          <div class="flex flex-col text-left">
+            <button class="button-arrow uppercase mb-6">
+              <span>rbac season 5</span>
+              <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+            </button>
+            <div class="title-white uppercase">prize</div>
+            <div class="title uppercase">structure</div>
+          </div>
+        </div>
+        <div class="w-1/2 space-y-6">
+          <div class="flex justify-between custom-achievement items-center">
+            <div class="flex items-center">
+              <img src="./src/image/icon/champion.svg" alt="" class="mr-6" />
+              <span class="text-2xl font-bold">Champion</span>
+            </div>
+            <div class="text-gradient text-2xl font-bold">To be updated</div>
+          </div>
+          <div class="flex justify-between custom-achievement items-center">
+            <div class="flex items-center">
+              <img src="./src/image/icon/1st.svg" alt="" class="mr-6" />
+              <span class="text-2xl font-bold">1st runner up</span>
+            </div>
+            <div class="text-gradient text-2xl font-bold">To be updated</div>
+          </div>
+          <div class="flex justify-between custom-achievement items-center">
+            <div class="flex items-center">
+              <img src="./src/image/icon/2nd.svg" alt="" class="mr-6" />
+              <span class="text-2xl font-bold">2nd runner up</span>
+            </div>
+            <div class="text-gradient text-2xl font-bold">To be updated</div>
+          </div>
+          <div class="flex justify-between custom-achievement items-center">
+            <div class="flex items-center">
+              <img src="./src/image/icon/3rd.svg" alt="" class="mr-6" />
+              <span class="text-2xl font-bold">4th & 5th place</span>
+            </div>
+            <div class="text-gradient text-2xl font-bold">To be updated</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- organizers -->
+      <section class="flex justify-center items-center mt-32" id="prize">
+        <div class="w-1/2">
+          <div class="flex flex-col text-left">
+            <button class="button-arrow uppercase mb-6">
+              <span>rbac season 5</span>
+              <img src="./src/image/icon/Arrow_Left.svg" alt="" />
+            </button>
+            <div class="title-white uppercase">our</div>
+            <div class="title uppercase">organizers</div>
+          </div>
+        </div>
+        <div class="w-1/2">
+          <div class="flex space-x-6 justify-between">
+            <img src="./src/image/icon/rmit.svg" alt="" class="w-40" />
+            <img
+              src="./src/image/icon/AnalysticsCLub.svg"
+              alt=""
+              class="w-40" />
+            <img src="./src/image/icon/RMIT_student.svg" alt="" class="w-40" />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Sponsors -->
+    <section
+      id="sponsors"
+      style="
+        background-image: url('./src/image/BG_Section4.jpg');
+        padding: 128px 110px;
+      ">
+      <div class="w-full text-center mb-12">
+        <div class="title-white uppercase">our</div>
+        <div class="title uppercase">sponsors</div>
+      </div>
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex space-x-6">
+          <img src="./src/image/icon/sponsor/sponsor_vinfast.svg" alt="" />
+          <img src="./src/image/icon/sponsor/sponsor_coca.svg" alt="" />
+        </div>
+        <div class="flex space-x-6">
+          <img src="./src/image/icon/sponsor/sponsor_samsung.svg" alt="" />
+          <img src="./src/image/icon/sponsor/sponsor_intel.svg" alt="" />
+        </div>
+        <div class="flex space-x-6">
+          <img src="./src/image/icon/sponsor/sponsor_pg.svg" alt="" />
+          <img src="./src/image/icon/sponsor/sponsor_grab.svg" alt="" />
+        </div>
+        <div class="flex space-x-6">
+          <img src="./src/image/icon/sponsor/sponsor_unilever.svg" alt="" />
+          <img src="./src/image/icon/sponsor/sponsor_idp.svg" alt="" />
+          <img src="./src/image/icon/sponsor/sponsor_ila.svg" alt="" />
+        </div>
+        <div class="flex">
+          <img src="./src/image/icon/sponsor/sponsor_vng.svg" alt="" />
+        </div>
+        <div class="flex">
+          <img src="./src/image/icon/sponsor/sponsor_yeah1.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section
+      id="contact"
+      class="text-center bg-cover"
+      style="
+        background-image: url('./src/image/BG_Footer.jpg');
+        padding: 128px 72px 64px 72px;
+      ">
+      <div class="flex mb-12">
+        <div class="flex flex-col w-1/2 text-left">
+          <div class="font-bold text-3xl w-1/2 mb-6">RMIT Analytics Club</div>
+          <div class="text-gray w-1/2">
+            Founded in 2008, Analytics Club aims to aid students as they explore
+            the Business Analytics field. Our mission is to create a
+            professional environment for young students who are passionate about
+            Business Analytics, and also create a bridge between students and
+            businesses, businesses and RMIT.
+          </div>
+        </div>
+        <div class="w-1/2 flex justify-between">
+          <div class="flex flex-col text-left">
+            <div class="text-2xl mb-6 font-bold">Contact</div>
+            <div class="text-gradient mb-2 font-bold text-lg">
+              Project Leader
+            </div>
+            <div class="mb-4">Khanh Linh (Ms): 0949115748</div>
+            <div class="text-gradient mb-2 font-bold text-lg">
+              External Relations Leader
+            </div>
+            <div class="mb-4">Hong Quan (Mr): 0839494937</div>
+            <div class="text-gradient mb-2 font-bold text-lg">
+              Program Leader
+            </div>
+            <div>Mai Hien (Ms): 0949115748</div>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex">
+              <img
+                src="./src/image/icon/Social_Facebook.svg"
+                alt=""
+                class="mr-2" />
+              <span>RBAC Fanpage</span>
+            </div>
+            <div class="flex my-2">
+              <img
+                src="./src/image/icon/Social_Facebook.svg"
+                alt=""
+                class="mr-2" />
+              <span>RBAC Community Group</span>
+            </div>
+            <div class="flex">
+              <img src="./src/image/icon/Mail.svg" alt="" class="mr-2" />
+              <span>rbachampion.05@gmail.com</span>
+            </div>
+            <div class="flex mt-2">
+              <img
+                src="./src/image/icon/Social_LinkedIn.svg"
+                alt=""
+                class="mr-2" />
+              <span>RMIT Business Analytics Champion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-between pt-6 items-center"
+        style="border-top: 2px solid rgba(255, 255, 255, 0.2)">
+        <div class="flex space-x-3">
+          <img src="./src/image/icon/rmit.svg" alt="" class="w-20" />
+          <img src="./src/image/icon/AnalysticsCLub.svg" alt="" class="w-20" />
+          <img
+            src="./src/image/icon/AnalysticsCLub_logo.svg"
+            alt=""
+            class="w-20" />
+          <img src="./src/image/icon/RMIT_student.svg" alt="" class="w-20" />
+        </div>
+        <div class="text-gray text-sm">
+          Copyright &copy; 2024 RBAC. All rights reserved
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/countdown.js"></script>
+    <script src="./src/register.js"></script>
+    <script src="./src/register-header.js"></script>
+    <script src="./src/slider.js"></script>
+    <script src="./src/timeline.js"></script>
+    <script src="./src/header.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- collapse extend timeline -->
+    <script>
+      const timelineItems = document.querySelectorAll(".timeline-item h3");
+
+      timelineItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const parentItem = item.parentElement;
+          parentItem.classList.toggle("expanded");
+        });
+      });
+    </script>
+
+    <!-- bấm vào logo trả về đầu trang -->
+    <script>
+      document.getElementById("logo").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

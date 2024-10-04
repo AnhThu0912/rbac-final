@@ -1,0 +1,16 @@
+{
+  "name": "RBAC",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
+  },
+  "repository": "ssh://git@gitlab.com/witwork/rbac/web.git",
+  "author": "Anh Thu <tranphuanhthu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.12"
+  }
+}
